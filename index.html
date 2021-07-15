@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -11,13 +10,46 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Tip Calculator App</title>
 
-    <title>Frontend Mentor | Tip calculator app</title>
+    <!--FONTS and STYLES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <section class="container">
+      <div id="box">
+        <h1 class="title">SPLITTER</h1>
+        <div id="calc">
+          <div class="grid" id="bill">
+            <p>Bill</p>
+            <input type="text" value="$" id="billvalue" />
+            <p>Select Tip%</p>
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input type="text" value="Custom" id="custom" />
+            <p>Number of People</p>
+          </div>
+          <div class="grid" id="results">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+            <p>Total</p>
+            <p>/ person</p>
+            <button>Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="attribution">
       Challenge by
