@@ -29,15 +29,17 @@
         <h1 class="title">SPLITTER</h1>
         <div id="calc">
           <div class="grid" id="bill">
-            <p>Bill</p>
-            <input type="text" value="$" id="billvalue" />
+            <form>
+              <p>Bill</p>
+              <input type="number" placeholder="$" id="billvalue" value="" />
+            </form>
             <p>Select Tip%</p>
             <button>5%</button>
             <button>10%</button>
             <button>15%</button>
             <button>25%</button>
             <button>50%</button>
-            <input type="text" value="Custom" id="custom" />
+            <form type="text" value="Custom" id="custom" />
             <p>Number of People</p>
           </div>
           <div class="grid" id="results">
@@ -57,5 +59,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="./main.js"></script>
   </body>
 </html>
