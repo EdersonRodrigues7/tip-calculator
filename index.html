@@ -2,15 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <title>Tip Calculator App</title>
+    <!--ICONS-->
+    <link rel="stylesheet" href="./images/icon-dollar.svg" />
+    <link rel="stylesheet" href="./images/icon-person.svg" />
+    <link rel="stylesheet" href="./images/logo.svg" />
 
     <!--FONTS and STYLES-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,43 +21,40 @@
 
     <link rel="stylesheet" href="./styles.css" />
   </head>
-
   <body>
-    <section class="container">
-      <div id="box">
-        <h1 class="title">SPLITTER</h1>
-        <div id="calc">
-          <div class="grid" id="bill">
-            <form>
-              <p>Bill</p>
-              <input type="number" placeholder="$" id="billvalue" value="" />
-            </form>
-            <p>Select Tip%</p>
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
-            <form type="text" value="Custom" id="custom" />
-            <p>Number of People</p>
+    <section id="container">
+      <img src="./images/logo.svg" alt="Logo" />
+      <div id="calculator">
+        <form id="bill">
+          <label>Bill</label>
+          <input class="larger" type="text" />
+          <label id="tips">Select Tip %</label>
+          <div id="buttons">
+            <button class="button">5%</button>
+            <button class="button">10%</button>
+            <button class="button">15%</button>
+            <button class="button">20%</button>
+            <button class="button">30%</button>
+            <input
+              id="custom"
+              class="button"
+              type="text"
+              placeholder="Custom"
+            />
           </div>
-          <div class="grid" id="results">
-            <p>Tip Amount</p>
-            <p>/ person</p>
-            <p>Total</p>
-            <p>/ person</p>
-            <button>Reset</button>
-          </div>
+          <label>Number of People</label>
+          <input class="larger" type="number" />
+        </form>
+        <div id="results">
+          <h5>Tip Amount</h5>
+          <p>/person</p>
+          <p id="final">$Valor</p>
+          <h5>Total</h5>
+          <p>/person</p>
+          <p id="final">$Valor</p>
+          <button id="reset-button">Reset</button>
         </div>
       </div>
     </section>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-    <script src="./main.js"></script>
   </body>
 </html>
