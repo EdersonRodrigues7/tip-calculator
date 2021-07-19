@@ -7,9 +7,7 @@
     <title>Tip Calculator</title>
 
     <!--ICONS-->
-    <link rel="stylesheet" href="./images/icon-dollar.svg" />
-    <link rel="stylesheet" href="./images/icon-person.svg" />
-    <link rel="stylesheet" href="./images/logo.svg" />
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/png" />
 
     <!--FONTS and STYLES-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,14 +21,19 @@
   </head>
   <body>
     <section id="container">
-      <img src="./images/logo.svg" alt="Logo" />
+      <img id="logo" src="./images/logo.svg" alt="Logo" />
       <div id="calculator">
         <form id="bill">
           <label>Bill</label>
-          <input class="larger" type="text" />
+          <div class="icon">
+            <input id="billValue" class="larger" type="text" />
+            <img src="./images/icon-dollar.svg" alt="dollar" />
+          </div>
           <label id="tips">Select Tip %</label>
           <div id="buttons">
-            <button class="button">5%</button>
+            <button class="button" onOff="selected" onclick="preventDefault">
+              5%
+            </button>
             <button class="button">10%</button>
             <button class="button">15%</button>
             <button class="button">20%</button>
@@ -43,18 +46,26 @@
             />
           </div>
           <label>Number of People</label>
-          <input class="larger" type="number" />
+          <div class="icon">
+            <input id="number" class="larger" type="text" />
+            <img src="./images/icon-person.svg" alt="people" />
+          </div>
         </form>
         <div id="results">
-          <h5>Tip Amount</h5>
-          <p>/person</p>
-          <p id="final">$Valor</p>
-          <h5>Total</h5>
-          <p>/person</p>
-          <p id="final">$Valor</p>
-          <button id="reset-button">Reset</button>
+          <div class="results-left">
+            <h5>Tip Amount</h5>
+            <span id="final">$4.27</span>
+            <p>/person</p>
+          </div>
+          <div class="results-right">
+            <h5>Total</h5>
+            <span id="final">$32.79</span>
+            <p>/person</p>
+          </div>
+          <button id="reset-button">RESET</button>
         </div>
       </div>
     </section>
+    <script src="./main.js"></script>
   </body>
 </html>

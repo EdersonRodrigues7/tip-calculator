@@ -1,10 +1,8 @@
-const teste = document.getElementById('billValue');
-console.log(teste);
-//teste.addEventListener()
-
-const billValue = 630;
+const billValue = document.querySelector('#billValue').value;
+console.log(document.querySelector('#billValue').value);
 const tipPct = 15;
-const people = 8;
+const people = document.querySelector('#number').value;
+console.log(document.querySelector('#number').value);
 
 const calcTip = bill => {
   let tip = bill / tipPct;

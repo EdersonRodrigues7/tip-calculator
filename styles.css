@@ -12,6 +12,7 @@
   --container-color: hsl(185, 41%, 84%);
   --body-color: hsl(189, 41%, 97%);
   --White-color: hsl(0, 0%, 100%);
+  --grey-color: hsl(0, 0%, 85%);
 
   --body-font: 'Space Mono';
 }
@@ -27,17 +28,18 @@ body {
 
 #container {
   margin: auto;
-  height: 35rem;
+  max-height: 45rem;
   max-width: 50rem;
+  box-sizing: content-box;
   background-color: var(--container-color);
-  padding: 4rem 4rem;
+  padding: 4rem 6rem 6rem 6rem;
   border-radius: 0.25rem;
   box-shadow: 2rem, 2rem, 2rem, black;
   text-align: center;
 }
 
-img {
-  margin-bottom: 3rem;
+#logo {
+  margin-top: 3rem;
 }
 
 h5 {
@@ -45,7 +47,8 @@ h5 {
 }
 
 #calculator {
-  background-color: white;
+  margin: 3rem;
+  background-color: var(--White-color);
   padding: 2rem;
   border-radius: 0.3rem;
   display: grid;
@@ -58,6 +61,18 @@ h5 {
   text-align: left;
   color: var(--title-color);
   font-weight: bold;
+  max-width: 18rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon img {
+  position: absolute;
+  left: 10px;
 }
 
 #buttons {
@@ -65,11 +80,11 @@ h5 {
   margin-bottom: 0.5rem; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .button {
-  color: white;
+  color: var(--White-color);
   font-family: var(--body-font);
   font-size: 1rem;
   font-weight: bold;
@@ -80,6 +95,7 @@ h5 {
   margin-top: 0.3rem;
   margin-right: 1rem;
   width: 5rem;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -88,36 +104,59 @@ h5 {
 }
 
 #custom {
-  color: grey;
-  background-color: white;
+  color: var(--body-color);
+  background-color: var(--White-color);
+  border: none;
 }
 
 form .larger {
+  font-family: var(--body-font);
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: right;
+  color: var(--results-color);
+  background-color: var(--White-color);
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
   width: 100%;
   margin: 0.5rem 0;
 }
 
 #results {
+  display: grid;
+  gap: 1rem;
   font-family: var(--body-font);
   color: white;
   background-color: var(--results-color);
-  border-radius: 0.25rem;
-  padding: 1rem;
+  border-radius: 1rem;
+  padding: 2rem 2rem 1rem 2rem;
   text-align: left;
 }
 
 #results p {
   color: var(--text-color);
+  width: fit-content;
+  display: inline-block;
 }
 
 #results #final {
   color: var(--reset-color);
+  font-size: 2rem;
+  font-weight: 900;
   text-align: right;
+  /* margin-left: 3rem; */
 }
 
 #reset-button {
-  width: 100%;
+  font-family: var(--body-font);
   color: var(--results-color);
   background-color: var(--reset-color);
-  margin-top: 4rem;
+  font-weight: 900;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }
