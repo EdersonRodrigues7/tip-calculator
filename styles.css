@@ -140,7 +140,7 @@ form .larger {
   display: inline-block;
 }
 
-#results #final {
+#results .final {
   color: var(--reset-color);
   font-size: 2rem;
   font-weight: 900;
