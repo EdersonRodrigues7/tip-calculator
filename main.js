@@ -1,14 +1,15 @@
 const tipButtons = document.querySelectorAll('.button');
 const resetButton = document.querySelector('#reset-button');
 const selectTip = document.querySelector('#buttons');
-let billValue, tipPct, tip, people, tipAmount, total, custom;
+const billValue = document.querySelector('#billValue');
+const people = document.querySelector('#number');
+
+let tipPct, tip, tipAmount, total, custom, bills, person;
 
 const resetCalc = () => {
-  billValue = document.querySelector('#billValue');
   billValue.value = '';
   tipPct = 0;
   tip;
-  people = document.querySelector('#number');
   people.value = '';
   tipAmount = document.querySelector('#tip-amount');
   tipAmount.textContent = '00.00';
@@ -55,15 +56,7 @@ for (let i = 0; i < tipButtons.length; i++) {
 
     tipPct = Number(tipButtons[i].value);
     showResults();
-    console.log(tipPct, billValue, people);
-    const removeActive = () => {
-      tipButtons[{}].classList.remove('active');
-    };
-    // while(i>=0 && i<=4){
-    //   removeActive()
-    // }
   });
-  // while(tipButtons[i].classList.contains('active')){}
 }
 
 custom.addEventListener('click', function () {
@@ -76,25 +69,27 @@ custom.addEventListener('click', function () {
 custom.addEventListener('change', function () {
   tipPct = Number(custom.value);
   showResults();
-  console.log(tipPct, billValue, people);
 });
 
 billValue.addEventListener('change', function () {
-  billValue = Number(billValue.value);
-  console.log(tipPct, billValue, people);
+  bills = Number(billValue.value);
   showResults();
 });
 
 people.addEventListener('change', function () {
-  people = Number(people.value);
-  console.log(tipPct, billValue, people);
-  showResults();
+  person = Number(people.value);
+  if (person <= 0) {
+    alert('Please insert a number higher than 0');
+  } else {
+    showResults();
+  }
 });
 
 const showResults = () => {
-  tip = billValue * (tipPct / 100);
-  tipAmount.textContent = `$${(tip / people).toFixed(2)}`;
-  total.textContent = `$${(billValue / people + tip / people).toFixed(2)}`;
+  tip = bills * (tipPct / 100);
+  tipAmount.textContent = `$${(tip / person).toFixed(2)}`;
+  total.textContent = `$${(bills / person + tip / person).toFixed(2)}`;
+  console.log(tipPct, bills, person);
 };
 
 resetButton.addEventListener('click', resetCalc);
