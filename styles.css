@@ -163,9 +163,19 @@ form .larger {
 }
 
 @media (max-width: 810px) {
+  body {
+    align-items: center;
+    padding: 0;
+  }
+  #container {
+    padding: 1rem;
+  }
+  #calculator {
+    margin: auto;
+  }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 767px) {
   body {
     align-items: center;
     height: 100%;
@@ -173,7 +183,7 @@ form .larger {
   }
   #container {
     height: 100%;
-    max-width: 33.75rem;
+    max-width: 47.93rem;
     padding: 0;
   }
   #logo {
@@ -184,10 +194,10 @@ form .larger {
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
     border-radius: 1.8rem;
-    max-width: 33.75rem;
+    max-width: 47.93rem;
   }
   #bill {
-    max-width: 75%;
+    max-width: 100%;
   }
   #buttons {
     grid-template-columns: 1fr 1fr;
@@ -198,19 +208,14 @@ form .larger {
     margin: 0.3rem auto;
     width: 8rem;
   }
-  #results {
-    max-width: 75%;
-  }
   .results-left,
   .results-right {
-    box-sizing: content-box;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-
-  .results-left h5 {
-    margin-right: 5rem;
-  }
-  .results-right h5 {
-    margin-right: 7.5rem;
+  .mobile {
+    display: inline-flex;
+    align-items: center;
   }
 }
