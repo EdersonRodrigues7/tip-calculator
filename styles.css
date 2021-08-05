@@ -167,6 +167,9 @@ form .larger {
     align-items: center;
     padding: 0;
   }
+  #logo {
+    margin-bottom: 1.5rem;
+  }
   #container {
     padding: 1rem;
   }
